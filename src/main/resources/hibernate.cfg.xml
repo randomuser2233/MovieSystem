@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL Dialect -->
+<!--		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+		<!-- Database Connection Settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/onestudent?useSSL=false</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Nguy3nth@iphu0ng</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!-- Specifying Session Context -->
+		<property name="hibernate.current_session_context_class">
+			org.hibernate.context.internal.ThreadLocalSessionContext
+		</property>
+
+		<!-- Model Mapping Here -->
+		<mapping class="com.mvms.entity.Customer"/>
+		<mapping class="com.mvms.entity.Address"/>
+		<mapping class="com.mvms.entity.Store"/>
+		<mapping class="com.mvms.entity.Phone"/>
+		<mapping class="com.mvms.entity.Order"/>
+		<mapping class="com.mvms.entity.Actor"/>
+		<mapping class="com.mvms.entity.Category"/>
+		<mapping class="com.mvms.entity.City"/>
+		<mapping class="com.mvms.entity.Country"/>
+		<mapping class="com.mvms.entity.Film"/>
+		<mapping class="com.mvms.entity.FilmActor"/>
+		<mapping class="com.mvms.entity.FilmCategory"/>
+		<mapping class="com.mvms.entity.Inventory"/>
+		<mapping class="com.mvms.entity.Language"/>
+		<mapping class="com.mvms.entity.Payment"/>
+		<mapping class="com.mvms.entity.Rental"/>
+		<mapping class="com.mvms.entity.Staff"/>
+
+	</session-factory>
+</hibernate-configuration>
